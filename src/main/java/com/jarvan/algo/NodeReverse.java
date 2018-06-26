@@ -1,7 +1,5 @@
 package com.jarvan.algo;
 
-import java.util.Random;
-
 /**
  * 链表翻转
  * 给定一个链表，翻转该链表从m到n的位置。
@@ -34,10 +32,10 @@ public class NodeReverse {
     }
 
     public static void main(String[] args) {
-        Node pHead = NodeUtil.generateNode(false);
-        NodeUtil.printNode(pHead);
+        Node pHead = NodeUtils.generateNode(false);
+        NodeUtils.printNode(pHead);
         reverse(pHead, 2, 5);
-        NodeUtil.printNode(pHead);
+        NodeUtils.printNode(pHead);
     }
 
 }

@@ -3,13 +3,13 @@ package com.jarvan.algo;
 import java.util.Arrays;
 import java.util.Random;
 
-public class NodeUtil {
+public class NodeUtils {
     public static Node generateNode(boolean isSort) {
         Node pHead = new Node(0);
         Random random = new Random();
         int[] array = new int[10];
         for (int i = 0; i < 10; i++) {
-            array[i] = random.nextInt(10);
+            array[i] = random.nextInt(10) + 1;
         }
         if (isSort) {
             Arrays.sort(array);

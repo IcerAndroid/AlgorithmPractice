@@ -6,16 +6,16 @@ package com.jarvan.algo;
  */
 public class NodeDeleteDuplicate {
     public static void main(String[] args) {
-        Node node = NodeUtil.generateNode(true);
-        NodeUtil.printNode(node);
-        deleteDuplicate(node);
-        NodeUtil.printNode(node);
+        Node node = NodeUtils.generateNode(true);
+        NodeUtils.printNode(node);
+        // deleteDuplicate(node);
+        deleteDuplicate3(node);
+        NodeUtils.printNode(node);
     }
 
     public static void deleteDuplicate(Node head) {
         Node pPre = head.next;
         Node pCur;
-
         while (pPre != null) {
             pCur = pPre.next;
             if (pCur != null && pCur.data == pPre.data) {
@@ -24,7 +24,47 @@ public class NodeDeleteDuplicate {
                 pPre = pCur;
             }
         }
-
     }
+
+    public static void deleteDuplicate2(Node head) {
+        Node pPre = head;
+        Node pCur = pPre.next;
+        Node pNext;
+        while (pCur != null) {
+            pNext = pCur.next;
+            while (pNext != null && pCur.data == pNext.data) {
+                pPre.next = pNext;
+                pCur = pNext;
+                pNext = pCur.next;
+            }
+            pPre = pCur;
+            pCur = pNext;
+        }
+    }
+
+    //删除所有的重复数据
+    public static void deleteDuplicate3(Node head) {
+        Node pPre = head;
+        Node pCur = pPre.next;
+        Node pNext;
+        boolean isDup;
+        while (pCur != null) {
+            isDup = false;
+            pNext = pCur.next;
+            while (pNext != null && pCur.data == pNext.data) {
+                pPre.next = pNext;
+                pCur = pNext;
+                pNext = pCur.next;
+                isDup = true;
+            }
+            if (isDup) {
+                pPre.next = pNext;
+            } else {
+                pPre = pCur;
+            }
+            pCur = pNext;
+        }
+    }
+
 
 }
