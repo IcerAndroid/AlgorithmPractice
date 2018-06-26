@@ -1,4 +1,4 @@
-package com.jarvan.algo;
+package com.jarvan.algo.node;
 
 /**
  * 找出两个链表的公共结点

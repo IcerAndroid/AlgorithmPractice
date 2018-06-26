@@ -1,4 +1,4 @@
-package com.jarvan.algo;
+package com.jarvan.algo.node;
 
 import java.util.Arrays;
 import java.util.Random;

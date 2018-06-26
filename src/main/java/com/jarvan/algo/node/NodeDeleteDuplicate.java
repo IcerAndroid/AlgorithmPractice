@@ -1,4 +1,4 @@
-package com.jarvan.algo;
+package com.jarvan.algo.node;
 
 /**
  * 给定排序的链表，删除重复的元素，只保留重复元素的第一个出现的结点

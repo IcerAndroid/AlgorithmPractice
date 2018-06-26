@@ -1,4 +1,4 @@
-package com.jarvan.algo;
+package com.jarvan.algo.node;
 
 /**
  * 给定一个链表和一个值X，将链表划分两部分，使得划分部分后小于X的结点在前，大于等于X的结点在后，

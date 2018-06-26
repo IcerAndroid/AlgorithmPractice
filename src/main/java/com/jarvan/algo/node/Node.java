@@ -1,4 +1,4 @@
-package com.jarvan.algo;
+package com.jarvan.algo.node;
 
 public class Node {
     public int data;
